@@ -1,11 +1,16 @@
-//http://127.0.0.1:5500/
-//                      #access_token=BQAvD71iRHyPLJTudhQoae-L3daJPd277FQsG9xUoZ0xY2zQc8moxbjyvPw9hx_metCCtbuzlhdaXMyWWps86t0Q84hXiJUchpQZ06DRUV18wVTEC-zWpfPQ1KoAaVQvK6lgOGju_Ub2eHmXDB8
-//                      &token_type=Bearer
-//                      &expires_in=3600
+const TEST_ORIGIN = "http://127.0.0.1:5500";
+const TEST_URL = "http://127.0.0.1:5500/currently_playing.html";
+
+const LIVE_ORIGIN = "https://nichapman.github.io";
+const LIVE_URL = "https://nichapman.github.io/Spotify-Player/currently_playing.html";
 
 const CLIENT_ID = "f53fde576f63491494e7b85e76227687";
 const RESPONSE_TYPE = "token";
-const REDIRECT_URL = "https://nichapman.github.io/Spotify-Player/currently_playing.html"; //TODO: change this to be general
+
+var origin = document.location.origin;
+
+const REDIRECT_URL = origin == TEST_ORIGIN ? TEST_URL : LIVE_URL;
+
 const AUTH_SCOPES = "user-read-currently-playing%20user-read-playback-state";
 
 const authUrl = `https://accounts.spotify.com/en/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URL}&scope=${AUTH_SCOPES}`;
