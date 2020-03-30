@@ -1,15 +1,7 @@
 const REQUEST_URL = "https://api.spotify.com/v1/me/player/currently-playing";
-const LYRICS_PAGE_URL = "http://127.0.0.1:5500/lyrics.html"
 
 var message = document.querySelector('h1');
 var albumCover = document.querySelector('img');
-var btn = document.querySelector('.btn');
-
-btn.addEventListener('click', showLyrics);
-
-function showLyrics() {
-    window.location = LYRICS_PAGE_URL;
-}
 
 var url = window.location.href;
 var token = getToken(url);

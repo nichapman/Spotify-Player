@@ -5,7 +5,7 @@
 
 const CLIENT_ID = "f53fde576f63491494e7b85e76227687";
 const RESPONSE_TYPE = "token";
-const REDIRECT_URL = "http://127.0.0.1:5500/currently_playing.html";
+const REDIRECT_URL = "http://127.0.0.1:5500/currently_playing.html"; //change this to be general
 const AUTH_SCOPES = "user-read-currently-playing%20user-read-playback-state";
 const authUrl = `https://accounts.spotify.com/en/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URL}&scope=${AUTH_SCOPES}`;
 
