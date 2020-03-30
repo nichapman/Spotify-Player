@@ -28,7 +28,8 @@ h1 {
 
 .btn {
     color: white;
-    background: #1DB954;
+    background: skyblue;
+    /* background: #1DB954; */
     opacity: 1;
     font-size: 20px;
     border: none;
