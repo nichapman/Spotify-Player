@@ -24,13 +24,14 @@ request.send();
 request.onload = function() {
     if (request.status == "200") {
         response = request.response;
-        message.textContent = "Currently Playing: ";
+        message.textContent = "Currently Playing:";
         songTitle.textContent = response.item.name;
         artist.textContent = response.item.artists[0].name;
         albumCover.src = response.item.album.images[0].url;
+        albumCover.style.display = "inline";
     } else {
         message.textContent = "Nothing currently playing";
-        albumCover.hidden = true;
+        console.log(request.status);
     }
 }
 
