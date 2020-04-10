@@ -15,6 +15,14 @@ const AUTH_SCOPES = "user-read-currently-playing%20user-read-playback-state";
 
 const authUrl = `https://accounts.spotify.com/en/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URL}&scope=${AUTH_SCOPES}`;
 
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope:',  registration.scope);
+    }).catch(function(error) {
+      console.log('ServiceWorker registration failed:', errror);
+    });
+}
+
 var btn = document.querySelector('.btn');
 btn.addEventListener('click', authenticate);
 
