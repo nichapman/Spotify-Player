@@ -1,0 +1,8 @@
+{
+    "name": "Spotify Player",
+    "description": "This app allows the user to view the currently playing track on Spotify",
+    "icons": [{
+      "src": "images/icon.png",
+      "sizes": "192x192"
+    }]
+}
