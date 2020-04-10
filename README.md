@@ -10,3 +10,6 @@ ToDo:
 - ~~Make it a PWA~~
 - Properly center login screen
 - Make currently playing get request every minute and update if changed song
+
+Extensions:
+- Add web scraping backend to obtain lyrics for currently playing song
