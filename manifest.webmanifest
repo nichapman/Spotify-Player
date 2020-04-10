@@ -1,11 +1,18 @@
 {
     "name": "Spotify Player",
+    "short_name": "Spotify Player",
+    "start_url": "./?utm_source=homescreen",
     "description": "This app allows the user to view the currently playing track on Spotify",
     "icons": [{
       "src": "images/icon.png",
       "sizes": "192x192"
+    },
+    {
+      "src": "images/large_icon.png",
+      "sizes": "512x512"
     }],
     "display": "standalone",
+    "orientation": "portrait" ,
     "background_color": "#000000",
     "theme_color": "#1DB954"
 }
