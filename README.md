@@ -7,3 +7,5 @@ ToDo:
 - Disable caching of sites (for now while in testing)
 - Make the website mobile friendly
 - Add handling to display 'No music being played'
+- Make it a PWA
+- Properly center login screen
