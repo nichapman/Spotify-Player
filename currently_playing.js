@@ -1,4 +1,6 @@
-const REQUEST_URL = "https://api.spotify.com/v1/me/player/currently-playing";
+const CURRENTLY_PLAYING_URL = "https://api.spotify.com/v1/me/player/currently-playing";
+const PAUSE_URL = "https://api.spotify.com/v1/me/player/pause";
+const PLAY_URL = "https://api.spotify.com/v1/me/player/play";
 
 var message = document.querySelector('h1');
 var albumCover = document.querySelector('.album');
@@ -22,7 +24,7 @@ function getToken(url) {
 
 function getCurrentlyPlaying() {
     let request = new XMLHttpRequest();
-    request.open('GET', REQUEST_URL);
+    request.open('GET', CURRENTLY_PLAYING_URL);
     request.setRequestHeader('Authorization', 'Bearer ' + token);
     request.responseType = 'json';
     request.send();
@@ -48,15 +50,29 @@ setInterval(function() {
 }, 15 * 1000);
 
 function pauseSong() {
-    console.log("PAUSE SONG");
-
-    pause.style.visibility = 'hidden';
-    play.style.visibility = 'visible';
+    let request = new XMLHttpRequest();
+    request.open('PUT', PAUSE_URL);
+    request.setRequestHeader('Authorization', 'Bearer ' + token);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        if (request.status == 204) {
+            play.hidden = false;
+            pause.hidden = true;
+        }
+    }
 }
 
 function playSong() {
-    console.log("PLAY SONG");
-
-    pause.style.visibility = 'visible';
-    play.style.visibility = 'hidden';
+    let request = new XMLHttpRequest();
+    request.open('PUT', PLAY_URL);
+    request.setRequestHeader('Authorization', 'Bearer ' + token);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        if (request.status == 204) {
+            play.hidden = true;
+            pause.hidden = false;
+        }
+    }    
 }

@@ -34,10 +34,25 @@ body {
     height: 100%;
 }
 
-img {
+.album {
     max-width: 85%;
-    max-height: 70vh;
+    max-height: 60vh;
     margin: auto;
     border:1px solid #ffffff;
     display: none;
+}
+
+.playPause {
+    position: relative;
+}
+
+.pause, .play {
+    position: absolute;
+    margin: 30px 0px;
+    color: white;
+    transform: translate(-50%);
+}
+
+.pause:hover, .play:hover {
+    cursor: pointer;
 }

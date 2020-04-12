@@ -11,7 +11,7 @@ var origin = document.location.origin;
 
 const REDIRECT_URL = origin == TEST_ORIGIN ? TEST_URL : LIVE_URL;
 
-const AUTH_SCOPES = "user-read-currently-playing%20user-read-playback-state";
+const AUTH_SCOPES = "user-read-currently-playing%20user-read-playback-state%20user-modify-playback-state";
 
 const authUrl = `https://accounts.spotify.com/en/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URL}&scope=${AUTH_SCOPES}`;
 
