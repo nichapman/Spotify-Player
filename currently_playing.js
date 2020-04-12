@@ -36,6 +36,7 @@ function getCurrentlyPlaying() {
             artist.textContent = response.item.artists[0].name;
             albumCover.src = response.item.album.images[0].url;
             albumCover.style.display = "inline";
+            pause.hidden = false;
         } else {
             message.textContent = "Nothing currently playing";
             console.log(request.status);
