@@ -12,7 +12,7 @@ ToDo:
 - ~~Make currently playing get request every minute and update if changed song~~
 - Cache user authentication so not needed when accessing app as a returning user
 - Offline functionality? Display last song played?
-- Add play/pause functionality
+- ~~Add play/pause functionality~~
 - Add skip/previous track functionality
 
 Extensions:
