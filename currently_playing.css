@@ -42,20 +42,26 @@ body {
     max-height: 60vh;
     margin: auto;
     border:1px solid #ffffff;
-    display: none;
 }
 
-.playPause {
-    position: relative;
+.back {
+    transform: translate(-200%);
+}
+
+.skip {
+    transform: translate(100%);
 }
 
 .pause, .play {
-    position: absolute;
-    margin: 30px 0px;
-    color: white;
     transform: translate(-50%);
 }
 
-.pause:hover, .play:hover {
+.pause, .play, .back, .skip {
+    margin: auto;
+    position: absolute;
+    margin: 30px 0px;
+}
+
+.pause:hover, .play:hover, .back:hover, .skip:hover {
     cursor: pointer;
 }
